@@ -15,4 +15,4 @@ FROM nginx
 
 COPY --from=node /usr/src/app/dist /usr/share/nginx/html
 
-EXPOSE 80 443
+EXPOSE 8080 443
