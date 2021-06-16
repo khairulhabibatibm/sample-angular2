@@ -11,8 +11,8 @@ RUN npm install
 RUN npm run build --prod
 
 
-FROM nginx
+FROM bitnami/nginx:latest
 
-COPY --from=node /usr/src/app/dist /usr/share/nginx/html
+COPY --from=node /usr/src/app/dist /app
 
-EXPOSE 8080 443
+EXPOSE 8080
